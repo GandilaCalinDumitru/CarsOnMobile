@@ -1,0 +1,144 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="FilterExtractResultsTable" this:FilterExtractResultsTable.in_minYear="-1" this:FilterExtractResultsTable.in_maxYear="-1" this:FilterExtractResultsTable.in_minPrice="-1" this:FilterExtractResultsTable.in_maxPrice="-1" this:FilterExtractResultsTable.in_minKm="-1" this:FilterExtractResultsTable.in_maxKm="-1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="io_dtExtractedData" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="in_minYear" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_maxYear" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_minPrice" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_maxPrice" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_minKm" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_maxKm" Type="InArgument(x:Int32)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>615,2155</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>FilterExtractResultsTable_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="FilterExtractResultsTable" sap:VirtualizedContainerService.HintSize="555,779" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message - FilterExtractResultsTable" sap:VirtualizedContainerService.HintSize="513,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Start FilterExtractResultsTable&quot;]" />
+    <TryCatch DisplayName="Try Catch - Filter extracted table" sap:VirtualizedContainerService.HintSize="513,556" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <ui:InvokeCode ContinueOnError="{x:Null}" Code="//Filter table&#xA;if(in_minYear != -1) &#xA;&#x9;io_dtExtractedTable = io_dtExtractedTable.AsEnumerable().Where(currentRow =&gt; currentRow.Field&lt;int&gt;(&quot;Year&quot;) &gt; in_minYear).CopyToDataTable();&#xA;if(in_maxYear != -1) &#xA;&#x9;io_dtExtractedTable = io_dtExtractedTable.AsEnumerable().Where(currentRow =&gt; currentRow.Field&lt;int&gt;(&quot;Year&quot;) &lt; in_maxYear).CopyToDataTable();&#xA;if(in_minPrice != -1) &#xA;&#x9;io_dtExtractedTable = io_dtExtractedTable.AsEnumerable().Where(currentRow =&gt; currentRow.Field&lt;int&gt;(&quot;Price&quot;) &gt; in_minPrice).CopyToDataTable();&#xA;if(in_maxPrice != -1) &#xA;&#x9;io_dtExtractedTable = io_dtExtractedTable.AsEnumerable().Where(currentRow =&gt; currentRow.Field&lt;int&gt;(&quot;Price&quot;) &lt; in_maxPrice).CopyToDataTable();&#xA;if(in_minKm != -1) &#xA;&#x9;io_dtExtractedTable = io_dtExtractedTable.AsEnumerable().Where(currentRow =&gt; currentRow.Field&lt;int&gt;(&quot;Km&quot;) &gt; in_minKm).CopyToDataTable();&#xA;if(in_maxKm != -1) &#xA;&#x9;io_dtExtractedTable = io_dtExtractedTable.AsEnumerable().Where(currentRow =&gt; currentRow.Field&lt;int&gt;(&quot;Km&quot;) &lt; in_maxKm).CopyToDataTable();" DisplayName="Invoke code - Filter extracted table" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+          <ui:InvokeCode.Arguments>
+            <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dtExtractedTable">[io_dtExtractedData]</InOutArgument>
+            <InArgument x:TypeArguments="x:Int32" x:Key="in_minYear">[in_minYear]</InArgument>
+            <InArgument x:TypeArguments="x:Int32" x:Key="in_maxYear">[in_maxYear]</InArgument>
+            <InArgument x:TypeArguments="x:Int32" x:Key="in_minPrice">[in_minPrice]</InArgument>
+            <InArgument x:TypeArguments="x:Int32" x:Key="in_maxPrice">[in_maxPrice]</InArgument>
+            <InArgument x:TypeArguments="x:Int32" x:Key="in_minKm">[in_minKm]</InArgument>
+            <InArgument x:TypeArguments="x:Int32" x:Key="in_maxKm">[in_maxKm]</InArgument>
+          </ui:InvokeCode.Arguments>
+        </ui:InvokeCode>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="479,394" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Throw exception" sap:VirtualizedContainerService.HintSize="473,285" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MultipleAssign DisplayName="Multiple Assign - Initialize exception" sap:VirtualizedContainerService.HintSize="431,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                <ui:MultipleAssign.AssignOperations>
+                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="s:Exception">[exception]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="s:Exception">[new BusinessRuleException("Error:FilterExtractedTable")]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:Object">[exception.Data("Parameters")]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:Object">[new List(Of String)]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                  </scg:List>
+                </ui:MultipleAssign.AssignOperations>
+              </ui:MultipleAssign>
+              <Throw DisplayName="Throw - Filtering data" Exception="[exception]" sap:VirtualizedContainerService.HintSize="431,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>

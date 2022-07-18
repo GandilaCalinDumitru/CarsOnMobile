@@ -1,0 +1,126 @@
+{
+  "name": "CarsOnMobile",
+  "description": "Blank Process",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.Excel.Activities": "[2.12.3]",
+    "UiPath.Mail.Activities": "[1.15.2]",
+    "UiPath.System.Activities": "[22.4.1]",
+    "UiPath.Testing.Activities": "[22.4.3]",
+    "UiPath.UIAutomation.Activities": "[22.4.5]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "22.4.3.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "1ee89b9f-f043-48f9-bd4b-9ec5a2c29427",
+        "testCaseType": "TestCase",
+        "fileName": "UnitTests\\UnitTest_Mobile_OpenWebsite.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "8d7da953-00b9-44bb-b657-3350aecc25b6",
+        "testCaseType": "TestCase",
+        "fileName": "UnitTests\\UnitTest_Mobile_SetWebsiteLanguage.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "68b86837-6b42-4c4a-90d8-60ba229db6d1",
+        "testCaseType": "TestCase",
+        "fileName": "UnitTests\\UnitTest_Mobile_CheckOptions.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "0de26746-6dc5-476c-a654-91bb63ecc9d9",
+        "testCaseType": "TestCase",
+        "fileName": "UnitTests\\UnitTest_Mobile_SelectSimpleOption.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "e7aaae12-6ea4-4260-ac62-403bd31a3fa4",
+        "testCaseType": "TestCase",
+        "fileName": "UnitTests\\UnitTest_Mobile_SelectRangeOption.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "fc3c2e95-d7bd-42b8-82f7-8eb9898d8a77",
+        "testCaseType": "TestCase",
+        "fileName": "UnitTests\\UnitTest_Mobile_CompleteField.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "01337321-c572-4115-97f5-83ff20be158c",
+        "testCaseType": "TestCase",
+        "fileName": "UnitTests\\UnitTest_Mobile_ExtractResultsTabel.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "2b5a8fd5-a5f8-4edb-9a05-6e1ba475b2d8",
+        "testCaseType": "TestCase",
+        "fileName": "UnitTests\\UnitTest_ParseTableDetails.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "34f460b0-b568-4e2d-b499-812c4b33a5c9",
+        "testCaseType": "TestCase",
+        "fileName": "UnitTests\\UnitTest_FilterExtractResultsTable.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "53144f76-75b6-4e07-88c8-69ad44ff4f6e",
+        "testCaseType": "TestCase",
+        "fileName": "UnitTests\\UnitTest_Outlook_SendMail.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "0fc5de45-088c-4fcd-a80c-0f0450183282",
+        "testCaseType": "TestCase",
+        "fileName": "UnitTests\\UnitTest_WriteDataTableInExcel.xaml"
+      }
+    ],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "e90486f1-12f1-49d7-8e53-cf017c0f0762",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy"
+}
